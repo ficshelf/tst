@@ -23,8 +23,10 @@ Template.home.onRendered(function() {
   var template = this;
   template.autorun(function() {
     if (Session.get('location')) {
-      latitude = Session.get('location').coords.latitude;
-      longitude = Session.get('location').coords.longitude;
+      //latitude = Session.get('location').coords.latitude;
+      //longitude = Session.get('location').coords.longitude;
+	latitude=51.528167; //51.500152;
+	longitude=-0.192800; //-0.126236;
       if (!template.mapRendered) {
         template.map = L.map('map').setView([latitude, longitude], 15);
         template.mapRendered = true;
